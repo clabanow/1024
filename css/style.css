@@ -1,0 +1,638 @@
+body {
+	text-align: center;
+	background-color: #1f1f23;
+  font-family: 'Cantarell', sans-serif;
+}
+
+#header {
+	margin: 20px auto 10px auto;
+	width: 35%;
+}
+
+	#name {
+		font-size: 100px;
+		margin: 20px auto 0 auto;
+    font-family: 'Grand Hotel', serif;
+    color: lightgrey;
+    height: 90px;
+    display: inline-block;
+    margin-bottom: 10px;
+	}
+
+	#score-new-game-container {
+		margin: 0 auto;
+	}
+
+	.score-container,
+  #new-game {
+		border: 3px solid #343432;
+		width: 186px;
+		margin: 9px;
+		padding: 5px;
+		text-align: center;
+		display: inline-block;
+	}
+
+    #new-game {
+      border: 3px solid #343432;
+      height: 46px;
+      vertical-align: top;
+      line-height: 44px;
+      background-color: rgba(235,111,8,0.3);
+      width: 120px;
+    }
+
+		.score-header {
+			color: grey;
+			font-size: 16px;
+			font-variant: small-caps;
+			margin-bottom: 5px;
+      font-family: 'Fjalla One', sans-serif;
+      color: ;
+      letter-spacing: 1px;
+		}
+
+	#scoreboard {
+		background-color: #1a1a1a;
+		width: 200px;
+		height: 70px;
+		margin: 20px auto;
+		text-align: center;
+	}
+
+		#score {
+			font-size: 25px;
+			width: 70px;
+			margin: 0 auto;
+			color: lightgrey;
+		}
+
+#gameboard {
+	position: relative;
+	background-color: #808080;
+  overflow: hidden;
+  display: inline-block;
+  padding: 3px;
+  margin-top: 10px;
+}
+
+	#end-of-game {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		background-color: rgba(0,0,0,0.9);
+		color: white;
+		text-align: center;
+		padding-top: 50px;
+		display: none;
+		height: 316px;
+		width: 366px;
+		z-index: 100;
+		font-size: 70px;
+    color: lightgrey;
+	}
+
+		.new-game-btn {
+			margin-top: 20px;
+			display: inline-block;
+			padding: 15px;
+			font-weight: bold;
+      color: lightgray;
+			font-size: 20px;
+      border: 5px solid #eb6f08;
+      background-color: rgba(235,111,8,0.5);
+		}
+
+    .new-game-btn:hover {
+      cursor: pointer;
+    }
+
+	.row {
+		clear: both;
+	}
+
+	.cell {
+		background-color: #B0B0B0;
+    margin: 2px;
+    padding: 8px;
+    height: 70px;
+    width: 70px;
+    float: left;
+	}
+
+	.tile {
+		position: absolute;
+		background-color: #4d0000;
+		line-height: 86px;
+		font-size: 40px;
+		margin: 0;
+		padding: 0;
+		color: whitesmoke;
+	}
+
+p {
+	width: 40%;
+	color: grey;
+	display: inline-block;
+	margin: 20px auto;
+}
+
+a {
+  display: inline-block;
+  padding: 5px;
+  background-color: rgba(255,255,255,0.5);
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+/*ANIMATION*/
+
+.value2 {
+	background-color: #4d0000;
+}
+
+.value4 {
+	background-color: #a30000;
+	-webkit-animation: change16to32 0.5s ease;
+	-moz-animation: change16to32 0.5s ease;
+	-ms-animation: change16to32 0.5s ease;
+	-o-animation: change16to32 0.5s ease;
+	animation: change16to32 0.5s ease;
+}
+
+	@-webkit-keyframes change16to32 {
+		from {
+      background: #4d0000;
+    }
+    to {
+      background: #a30000;
+    }
+	}
+
+	@-moz-keyframes change16to32 {
+		from {
+      background: #4d0000;
+    }
+    to {
+      background: #a30000;
+    }
+	}
+
+	@-ms-keyframes change16to32 {
+		from {
+      background: #4d0000;
+    }
+    to {
+      background: #a30000;
+    }
+	}
+
+	@-o-keyframes change16to32 {
+		from {
+      background: #4d0000;
+    }
+    to {
+      background: #a30000;
+    }
+	}
+
+	@keyframes change16to32 {
+		from {
+      background: #4d0000;
+    }
+    to {
+      background: #a30000;
+    }
+	}
+
+.value8 {
+	background-color: #06bc08;
+	-webkit-animation: change4to8 0.5s ease;
+	-moz-animation: change4to8 0.5s ease;
+	-ms-animation: change4to8 0.5s ease;
+	-o-animation: change4to8 0.5s ease;
+	animation: change4to8 0.5s ease;
+}
+
+	@-webkit-keyframes change4to8 {
+		from {
+      background: #a30000;
+    }
+    to {
+      background: #06bc08;
+    }
+	}
+
+	@-moz-keyframes change4to8 {
+		from {
+      background: #a30000;
+    }
+    to {
+      background: #06bc08;
+    }
+	}
+
+	@-ms-keyframes change4to8 {
+		from {
+      background: #a30000;
+    }
+    to {
+      background: #06bc08;
+    }
+	}
+
+	@-o-keyframes change4to8 {
+		from {
+      background: #a30000;
+    }
+    to {
+      background: #06bc08;
+    }
+	}
+
+	@keyframes change4to8 {
+		from {
+      background: #a30000;
+    }
+    to {
+      background: #06bc08;
+    }
+	}
+
+.value16 {
+	background-color: #83004a;
+	-webkit-animation: change8to16 0.5s ease;
+	-moz-animation: change8to16 0.5s ease;
+	-ms-animation: change8to16 0.5s ease;
+	-o-animation: change8to16 0.5s ease;
+	animation: change8to16 0.5s ease;
+}
+
+	@-webkit-keyframes change8to16 {
+		from {
+      background: #06bc08;
+    }
+    to {
+      background: #83004a;
+    }
+	}
+
+	@-moz-keyframes change8to16 {
+		from {
+      background: #06bc08;
+    }
+    to {
+      background: #83004a;
+    }
+	}
+
+	@-ms-keyframes change8to16 {
+		from {
+      background: #06bc08;
+    }
+    to {
+      background: #83004a;
+    }
+	}
+
+	@-o-keyframes change8to16 {
+		from {
+      background: #06bc08;
+    }
+    to {
+      background: #83004a;
+    }
+	}
+
+	@keyframes change8to16 {
+		from {
+      background: #06bc08;
+    }
+    to {
+      background: #83004a;
+    }
+	}
+
+.value32 {
+	background-color: #eb6f08;
+	-webkit-animation: change16to32 0.5s ease;
+	-moz-animation: change16to32 0.5s ease;
+	-ms-animation: change16to32 0.5s ease;
+	-o-animation: change16to32 0.5s ease;
+	animation: change16to32 0.5s ease;
+}
+
+	@-webkit-keyframes change16to32 {
+		from {
+      background: #83004a;
+    }
+    to {
+      background: #eb6f08;
+    }
+	}
+
+	@-moz-keyframes change16to32 {
+		from {
+      background: #83004a;
+    }
+    to {
+      background: #eb6f08;
+    }
+	}
+
+	@-ms-keyframes change16to32 {
+		from {
+      background: #83004a;
+    }
+    to {
+      background: #eb6f08;
+    }
+	}
+
+	@-o-keyframes change16to32 {
+		from {
+      background: #83004a;
+    }
+    to {
+      background: #eb6f08;
+    }
+	}
+
+	@keyframes change16to32 {
+		from {
+      background: #83004a;
+    }
+    to {
+      background: #eb6f08;
+    }
+	}
+
+.value64 {
+	background-color: #006262;
+	-webkit-animation: change32to64 0.5s ease;
+	-moz-animation: change32to64 0.5s ease;
+	-ms-animation: change32to64 0.5s ease;
+	-o-animation: change32to64 0.5s ease;
+	animation: change32to64 0.5s ease;
+}
+
+	@-webkit-keyframes change32to64 {
+		from {
+      background: #eb6f08;
+    }
+    to {
+      background: #006262;
+    }
+	}
+
+	@-moz-keyframes change32to64 {
+		from {
+      background: #eb6f08;
+    }
+    to {
+      background: #006262;
+    }
+	}
+
+	@-ms-keyframes change32to64 {
+		from {
+      background: #eb6f08;
+    }
+    to {
+      background: #006262;
+    }
+	}
+
+	@-o-keyframes change32to64 {
+		from {
+      background: #eb6f08;
+    }
+    to {
+      background: #006262;
+    }
+	}
+
+	@keyframes change32to64 {
+		from {
+      background: #eb6f08;
+    }
+    to {
+      background: #006262;
+    }
+	}
+
+.value128 {
+	background-color: #ff0dbf;
+	-webkit-animation: change64to128 0.5s ease;
+	-moz-animation: change64to128 0.5s ease;
+	-ms-animation: change64to128 0.5s ease;
+	-o-animation: change64to128 0.5s ease;
+	animation: change64to128 0.5s ease;
+}
+
+	@-webkit-keyframes change64to128 {
+		from {
+      background: #006262;
+    }
+    to {
+      background: #ff0dbf;
+    }
+	}
+
+	@-moz-keyframes change64to128 {
+		from {
+      background: #006262;
+    }
+    to {
+      background: #ff0dbf;
+    }
+	}
+
+	@-ms-keyframes change64to128 {
+		from {
+      background: #006262;
+    }
+    to {
+      background: #ff0dbf;
+    }
+	}
+
+	@-o-keyframes change64to128 {
+		from {
+      background: #006262;
+    }
+    to {
+      background: #ff0dbf;
+    }
+	}
+
+	@keyframes change64to128 {
+		from {
+      background: #006262;
+    }
+    to {
+      background: #ff0dbf;
+    }
+	}
+
+.value256 {
+	background-color: #003d00;
+	-webkit-animation: change128to256 0.5s ease;
+	-moz-animation: change128to256 0.5s ease;
+	-ms-animation: change128to256 0.5s ease;
+	-o-animation: change128to256 0.5s ease;
+	animation: change128to256 0.5s ease;
+}
+
+	@-webkit-keyframes change128to256 {
+		from {
+      background: #ff0dbf;
+    }
+    to {
+      background: #003d00;
+    }
+	}
+
+	@-moz-keyframes change128to256 {
+		from {
+      background: #ff0dbf;
+    }
+    to {
+      background: #003d00;
+    }
+	}
+
+	@-ms-keyframes change128to256 {
+		from {
+      background: #ff0dbf;
+    }
+    to {
+      background: #003d00;
+    }
+	}
+
+	@-o-keyframes change128to256 {
+		from {
+      background: #ff0dbf;
+    }
+    to {
+      background: #003d00;
+    }
+	}
+
+	@keyframes change128to256 {
+		from {
+      background: #ff0dbf;
+    }
+    to {
+      background: #003d00;
+    }
+	}
+
+.value512 {
+	background-color: #eb0808;
+	-webkit-animation: change256to512 0.5s ease;
+	-moz-animation: change256to512 0.5s ease;
+	-ms-animation: change256to512 0.5s ease;
+	-o-animation: change256to512 0.5s ease;
+	animation: change256to512 0.5s ease;
+}
+
+	@-webkit-keyframes change256to512 {
+		from {
+      background: #003d00;
+    }
+    to {
+      background: #eb0808;
+    }
+	}
+
+	@-moz-keyframes change256to512 {
+		from {
+      background: #003d00;
+    }
+    to {
+      background: #eb0808;
+    }
+	}
+
+	@-ms-keyframes change256to512 {
+		from {
+      background: #003d00;
+    }
+    to {
+      background: #eb0808;
+    }
+	}
+
+	@-o-keyframes change256to512 {
+		from {
+      background: #003d00;
+    }
+    to {
+      background: #eb0808;
+    }
+	}
+
+	@keyframes change256to512 {
+		from {
+      background: #003d00;
+    }
+    to {
+      background: #eb0808;
+    }
+	}		
+
+	.value1024 {
+	background-color: gold;
+	-webkit-animation: change512to1024 0.5s ease;
+	-moz-animation: change512to1024 0.5s ease;
+	-ms-animation: change512to1024 0.5s ease;
+	-o-animation: change512to1024 0.5s ease;
+	animation: change512to1024 0.5s ease;
+}
+
+	@-webkit-keyframes change512to1024 {
+		from {
+      background: #eb0808;
+    }
+    to {
+      background: gold;
+    }
+	}
+
+	@-moz-keyframes change512to1024 {
+		from {
+      background: #eb0808;
+    }
+    to {
+      background: gold;
+    }
+	}
+
+	@-ms-keyframes change512to1024 {
+		from {
+      background: #eb0808;
+    }
+    to {
+      background: gold;
+    }
+	}
+
+	@-o-keyframes change512to1024 {
+		from {
+      background: #eb0808;
+    }
+    to {
+      background: gold;
+    }
+	}
+
+	@keyframes change512to1024 {
+		from {
+      background: #eb0808;
+    }
+    to {
+      background: gold;
+    }
+	}			
